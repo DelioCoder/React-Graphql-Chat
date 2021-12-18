@@ -13,7 +13,7 @@ export const Sidebar = () => {
                         <input 
                             type="text" 
                             placeholder='Buscar mensajes' 
-                            className='shadow appearance-none border rounded w-60 py-2 px-3 text-white bg-neutral-600 leading-tight focus:outline-none focus:shadow-outline'
+                            className='shadow appearance-none rounded-full h-10 w-11/12 py-2 px-3 text-white bg-neutral-600 leading-tight focus:outline-none focus:shadow-outline'
                         />
                     </div>
                 </div>
