@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server"
+    "start": "nodemon src/server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "graphql-yoga": "^1.18.3"
+    "bcryptjs": "^2.4.3",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

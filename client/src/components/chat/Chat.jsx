@@ -1,21 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
 import { useMutation, useSubscription } from '@apollo/client';
 
-import { getUser } from '../../assets/data';
 import { BiSend, BiInfoCircle } from 'react-icons/bi';
 import { LoadingBox } from '../shared/LoadingBox';
 
 import { MESSAGE_SUBSCRIPTION } from '../../graphql/subscriptions/messages';
 import { SENT_MESSAGE } from '../../graphql/mutations/messages';
+import { Headboard } from './Headboard';
 
 export const Chat = () => {
     let userIndex = 'Jack';
     const [currentUser, setCurrentUser] = useState('Jack');
     const [content, setContent] = useState('');
 
-    const params = useParams();
-    const user = getUser(parseInt(params.chatId));
     const [sentMessage] = useMutation(SENT_MESSAGE);
 
     const messagesEndRef = useRef(null)
@@ -52,14 +49,7 @@ export const Chat = () => {
                         <div className='w-full h-20 shadow-md'>
                             <div className="flex m-4">
                                 <div className='flex w-full'>
-                                    <img
-                                        src={user.img}
-                                        alt="User_profile"
-                                        className='w-12 h-12 rounded-full'
-                                    />
-                                    <p className='font-semibold py-2 px-4 text-2xl'>
-                                        {user.nombre}
-                                    </p>
+                                    <Headboard />
                                 </div>
                                 <div className='mt-1'>
                                     <BiInfoCircle style={{ fontSize: '2.5rem', cursor: 'pointer' }} />
