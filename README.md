@@ -1,5 +1,8 @@
-# React-Graphql-Chat
-Websockets included
+# 💬 React-Graphql-Chat 💬
+
+An React application about a sent messages web (Like Whatsapp hahaha)
+
+![alt text](https://img.icons8.com/plasticine/2x/whatsapp.png)
 
 ## Screenshots:
 
